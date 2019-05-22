@@ -1,0 +1,26 @@
+{
+  "name": "dom_all-is-counted",
+  "version": "1.0.0",
+  "description": "1) Create a page that would display the number of times the user clicked on it. It will start by displaying `0`, after the first click anywhere on the page it will replace `0` with `1`, after another click it will show `2` and so on.",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.26.5"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlhaMazurenko/dom_all-is-counted.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlhaMazurenko/dom_all-is-counted/issues"
+  },
+  "homepage": "https://github.com/OlhaMazurenko/dom_all-is-counted#readme"
+}
