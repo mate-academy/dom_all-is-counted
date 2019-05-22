@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+#count {
+  font-size: 150px;
+  color: gray;
+}
+
+button {
+  margin-left: 48%;
+}
