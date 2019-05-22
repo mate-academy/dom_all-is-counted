@@ -5,10 +5,10 @@ const clicks = sessionStorage.getItem('amountClicksOnPage');
 
 function putClicksOnPage(clicksAmount) {
   const resetAnimation = function() {
-    amount.style.fontSize = '6em';
     amount.style.animation = 'none';
   };
   amount.innerText = clicksAmount;
+  amount.style.fontSize = '6em';
   amount.style.animation = '2s onClickAnimation';
   setTimeout(resetAnimation, 2000);
 }
