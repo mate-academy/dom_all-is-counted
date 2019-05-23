@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.counter {
+    height: 100vh;
+    font-size: 300px;
+    text-align: center;
+}
