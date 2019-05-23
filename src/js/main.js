@@ -1,16 +1,19 @@
 let counter = sessionStorage.getItem('counter') || 0;
 let counterLine = document.getElementsByClassName('counterLine')[0];
-console.log(counterLine);
 
 document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('click', (event)=> {
     const element = event.target;
-    sessionStorage.setItem('counter', counter);
     ++counter;
-    counterLine.innerHTML = `${counter}`;
+    sessionStorage.setItem('counter', counter);
+    render(counterLine,  counter);
   });
 });
 
+function render(container, counter) {
+  container.innerHTML = counter;
+  }
+  
  counterLine.style.cssText = newFunction();
 
 function newFunction() {
