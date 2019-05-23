@@ -1,5 +1,6 @@
 let counter = sessionStorage.getItem('counter') || 0;
 let counterLine = document.getElementsByClassName('counterLine')[0];
+render(counterLine,  counter);
 
 document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('click', (event)=> {
@@ -12,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function render(container, counter) {
   container.innerHTML = counter;
-  }
+}
   
- counterLine.style.cssText = newFunction();
+counterLine.style.cssText = newFunction();
 
 function newFunction() {
   return "borderRadius: 10px; \
