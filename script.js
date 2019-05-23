@@ -6,11 +6,11 @@ function main () {
     counter = 0;
   }
 
-  counterHTML.innerHTML = counter;
+  render(counterHTML, counter);
 
   document.querySelector('html').addEventListener('click', () => {
     counter++;
-    counterHTML.innerText = counter;
+    render(counterHTML, counter);
   });
 
   window.addEventListener('beforeunload', () => {
@@ -23,3 +23,7 @@ function main () {
 }
 
 window.addEventListener('load', main);
+
+function render (container, count) {
+  container.innerText = count;
+}
