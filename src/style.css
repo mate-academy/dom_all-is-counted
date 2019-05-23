@@ -1,0 +1,14 @@
+body {
+  height: 100vh;
+  user-select: none;
+}
+
+.counter {
+  border: 1px solid grey;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background: rgba(234,169,82,0.33);
+  font-size: 25px;
+}
