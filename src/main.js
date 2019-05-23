@@ -2,7 +2,7 @@
 const body = document.querySelector('body');
 const store = window.sessionStorage;
 const output = document.querySelector('.counter')
-let counter = store.getItem('counter') || 0;
+let counter = store.getItem('number of clicks') || 0;
 
 function countClicks() {
     counter++
