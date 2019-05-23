@@ -1,6 +1,6 @@
 'use strict';
    
-const body = document.body;
+const box = document.body.querySelector('.container');
 const save = window.sessionStorage;
 let counter = save.getItem('counter') || 0;
 
@@ -10,9 +10,9 @@ const count = () => {
 }
 
 const getCount = () => {
-  body.querySelector('.container').innerHTML = `${counter}`;
+  box.innerHTML = `${counter}`;
   save.setItem('counter', counter);
 }
 
-body.addEventListener('click', count);
+document.body.addEventListener('click', count);
 getCount();
