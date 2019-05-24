@@ -1,11 +1,10 @@
 'use strict';
 
 const clickCounter = document.querySelector('#counter');
-let counter = sessionStorage.getItem('clickCounter') | 0;
+let counter = sessionStorage.getItem('clickCounter') || 0;
 
-const renderCount = place => {
-  place.textContent = counter;
-}
+const renderCount = place => place.textContent = counter;
+
 
 renderCount(clickCounter);
 
