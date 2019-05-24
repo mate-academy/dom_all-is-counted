@@ -1,10 +1,6 @@
 function main () {
   const counterHTML = document.querySelector('#count');
-  let counter = sessionStorage.getItem('count');
-
-  if(!counter) {
-    counter = 0;
-  }
+  let counter = sessionStorage.getItem('count') || 0;
 
   render(counterHTML, counter);
 
@@ -18,7 +14,7 @@ function main () {
   });
 
   document.querySelector('button').addEventListener('click', () => {
-    counterHTML.innerText = counter = -1;
+    render(counter = -1);
   });
 }
 
