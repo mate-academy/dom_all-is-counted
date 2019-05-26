@@ -1,15 +1,15 @@
 const p = document.querySelector("#clickcount");
-const storage = window.localStorage;
-
-let i = storage.getItem("clickcount");
-if(!i) {
-	i = 0;
-	storage.setItem("clickcount", 0);
+const storage = sessionStorage;
+ 
+let counter = storage.getItem("clickcount");
+if(!counter) {
+    counter = 0;
+    storage.setItem("clickcount", 0);
 }
-
-p.innerHTML = i;
+ 
+p.innerHTML = counter;
 document.addEventListener("click", () => {
-	i++;
-	p.innerHTML = i;
-	storage.setItem("clickcount", i);
+    counter++;
+    p.innerHTML = counter;
+    storage.setItem("clickcount", counter);
 });
