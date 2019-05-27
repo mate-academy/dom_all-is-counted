@@ -1,12 +1,12 @@
 const clicks = document.getElementById('clicks');
 
-window.onload = () => {
+window.addEventListener('load', () => {
+    const writeTextContent = (elem, content) => elem.textContent = content;
     let counter = sessionStorage.getItem('counter') || 0; 
-    clicks.textContent = counter;    
-
-    window.onclick = () => {
+    writeTextContent(clicks, counter);    
+    window.addEventListener('click', () => {
         counter++;
-        clicks.textContent = counter;
+        writeTextContent(clicks, counter);
         sessionStorage.setItem('counter', `${counter}`);
-    }
-}
+    })
+})
