@@ -1,5 +1,5 @@
 let counter = sessionStorage.getItem('counter') || 0;
-let counterLine = document.getElementsByClassName('counterLine')[0];
+let counterLine = document.querySelector('.counterLine');
 render(counterLine,  counter);
 
 document.addEventListener('DOMContentLoaded', function() {
