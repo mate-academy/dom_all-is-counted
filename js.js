@@ -1,9 +1,6 @@
 let counter = 0;
 
-document.body.addEventListener('click', (event) => {
-    if (event.target.tagName != 'BODY') {
-        return ;
-    }
+document.body.addEventListener('click', () => {
    counter++;
    sessionStorage.setItem('amount of clicks', counter);
    countClick();
