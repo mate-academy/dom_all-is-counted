@@ -1,0 +1,28 @@
+body {
+  background-color: salmon;
+  text-align: center;
+}
+
+.counted {
+  margin: 50px auto;
+  width: 150px;
+  height: 50px;
+  background-color: seagreen;
+  color: #fff;
+  font-size: 3em;
+  line-height: 50px;
+}
+
+.clear {
+  padding: 10px;
+  width: 30px;
+  margin: 0 auto;
+  text-decoration: none;
+  background-color: lightskyblue;
+  color: #fff;
+}
+
+.clear:hover {
+  background-color: yellow;
+  color: #000;
+}
