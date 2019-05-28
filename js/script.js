@@ -3,7 +3,6 @@ const clear = document.querySelector('.clear');
 let value = +sessionStorage.getItem('click') || 0;
 
 window.addEventListener('load', () => {
-  value = 0;
   clickCounter.innerHTML = value;
   clear.addEventListener('click', (event) => {
     value = -1;
