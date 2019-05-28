@@ -1,15 +1,18 @@
-let counter;
+let counter = sessionStorage.getItem('click') || 0;
 
-if (sessionStorage.getItem('click')) {
-  counter = sessionStorage.getItem('click');
-} else {
-  counter = 0;
+render('.click', counter);
+
+window.addEventListener('click', function(){
+  counter = increment(counter);
+  render('.click', counter);
+});
+
+function increment(counter) {
+  return ++counter;
 }
 
-document.querySelector('.click').innerHTML = counter;
-window.addEventListener('click', function(){
-  counter++;
-  document.querySelector('.click').innerHTML = counter;
-});
+function render(selector , counter) {
+  document.querySelector(selector).innerHTML = counter;
+}
 
 window.onunload = () => sessionStorage.setItem('click', counter);
