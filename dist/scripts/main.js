@@ -1,19 +1,21 @@
 'use strict';
 
 const counter = document.querySelector('.counter');
-let i = 0;
+let clickCount = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
-  const num = sessionStorage.getItem('count');
-  console.log(num);
-  if (num) {
-    i = num;
+  if (sessionStorage.getItem('count')) {
+    clickCount = sessionStorage.getItem('count');
   }
-  counter.innerHTML = i;
+  render();
 });
 
 document.addEventListener('click', function() {
-  i++;
-  sessionStorage.setItem('count', i);
-  counter.innerHTML = i;
+  clickCount++;
+  sessionStorage.setItem('count', clickCount);
+  render();
 });
+
+function render() {
+  counter.innerHTML = clickCount;
+}
