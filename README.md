@@ -1,4 +1,5 @@
 # All is Counted
+GitHub Hages link https://sherjlok15.github.io/dom_all-is-counted/
 
 1) Create a page that would display the number of times the user clicked on it. It will start by displaying `0`, after the first click anywhere on the page it will replace `0` with `1`, after another click it will show `2` and so on.
 
