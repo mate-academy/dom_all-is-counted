@@ -3,7 +3,7 @@ let counterLine = document.querySelector('.counterLine');
 render(counterLine,  counter);
 
 document.addEventListener('DOMContentLoaded', function() {
-  document.addEventListener('click', (event)=> {
+  document.addEventListener('click', ()=> {
     ++counter;
     sessionStorage.setItem('counter', counter);
     render(counterLine,  counter);
