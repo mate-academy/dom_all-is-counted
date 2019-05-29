@@ -11,5 +11,6 @@
 }
 
 button {
-  margin-left: 48%;
+  display: block;
+  margin: 10px auto;
 }

@@ -14,7 +14,8 @@ function main () {
   });
 
   document.querySelector('button').addEventListener('click', () => {
-    render(counter = -1);
+    counter = -1;
+    render(counterHTML, counter);
   });
 }
 
