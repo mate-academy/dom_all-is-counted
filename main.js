@@ -1,14 +1,12 @@
 'use strict';
  
 const container = document.querySelector('.container');
-
-
-let click = sessionStorage.getItem('click') || container.textContent;
+let click = sessionStorage.getItem('click') || container.textContent || 0;
 const data = () => {
-  return container.textContent = `${click}`;
+   container.textContent = `${click}`;
   };
 data();
-window.addEventListener('click',  () => {
+window.addEventListener('click', () => {
   click++;
   data();
   sessionStorage.setItem('click', `${click}`);
