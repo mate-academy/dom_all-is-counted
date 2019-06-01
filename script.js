@@ -15,4 +15,4 @@ function render(selector , counter) {
   document.querySelector(selector).innerHTML = counter;
 }
 
-window.onunload = () => sessionStorage.setItem('click', counter);
+window.addEventListener('unload', () => sessionStorage.setItem('click', counter));
