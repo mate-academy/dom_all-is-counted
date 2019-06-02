@@ -1,29 +1,34 @@
-'use strict';
+"use strict";
 
-window.addEventListener('load', main);
+window.addEventListener("load", main);
 
-const countPlace = document.querySelector('.count');
-const COUNT = 'counter';
+const COUNT = "counter";
 
-function main(){
-  numberSet();
-  numberIncrement();
+function main() {
+  const countPlace = document.querySelector(".count");
+
+  numberSet(countPlace);
+  numberIncrement(countPlace);
 }
 
-function numberIncrement() {
-  let incrementedNumber = sessionStorage.getItem(COUNT);
+function numberIncrement(place) {
+  let incrementedNumber = numberSet();
 
-  document.addEventListener('click', () => {
+  document.addEventListener("click", () => {
     incrementedNumber++;
     sessionStorage.setItem(COUNT, incrementedNumber);
-    countPlace.textContent = incrementedNumber;
+    place.textContent = incrementedNumber;
   });
 }
 
-function numberSet() {
-  if (!sessionStorage.getItem(COUNT)) {
+function numberSet(place) {
+  const number = sessionStorage.getItem(COUNT);
+
+  if (!number) {
     sessionStorage.setItem(COUNT, 0);
   }
-    countPlace.textContent = sessionStorage.getItem(COUNT);
-
+  if (place) {
+    place.textContent = number;
+  }
+  return number;
 }
