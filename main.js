@@ -1,16 +1,14 @@
 'use strict';
-function makeSortable (elem) {
-  var countClick = sessionStorage.getItem("countClick");
-   
-  let append = document.createElement('p');
+function countClickPage (elem) {
+  let countClickOnPage = sessionStorage.getItem('countClickOnPage');
+  let counterContainer = document.createElement('p');
+  elem.append(counterContainer);
+  counterContainer.textContent = countClickOnPage;
+  
   elem.addEventListener('click', (event) => {
-    append.remove();
-    sessionStorage.setItem("countClick", countClick);
-    countClick++;
-    append.innerHTML = countClick;
-    elem.append(append);
+    countClickOnPage++;
+    sessionStorage.setItem('countClickOnPage', countClickOnPage);
+    counterContainer.textContent = countClickOnPage;
   });
 }
-makeSortable (
-  document.querySelector('body')
-);  
+countClickPage (document.querySelector('body'));  
