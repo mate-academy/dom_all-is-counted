@@ -10,14 +10,10 @@ function main() {
 }
 
 function numberIncrement(place) {
-  try {
-    let incrementedNumber = sessionStorage.getItem(COUNT);
+    let incrementedNumber = sessionStorage.getItem(COUNT) || 0;
     document.addEventListener('click', () => {
-      incrementedNumber++;
       sessionStorage.setItem(COUNT, incrementedNumber);
       place.textContent = incrementedNumber;
+      incrementedNumber++;
     });
-  } catch {
-    sessionStorage.setItem(COUNT, 0);
-  }
 }
